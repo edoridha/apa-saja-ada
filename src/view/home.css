@@ -1,0 +1,32 @@
+/* Stil umum untuk semua layar */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Mengizinkan wrap pada item jika tidak muat dalam satu baris */
+    justify-content: space-between; /* Menyusun elemen di sepanjang sumbu utama dengan jarak yang sama */
+}
+
+.card {
+    width: 100%; /* Kartu akan memenuhi lebar kontainer */
+    margin-bottom: 1rem; /* Spasi antara kartu */
+}
+
+/* Media query untuk layar dengan lebar lebih dari 576px (tampilan ponsel) */
+@media (min-width: 576px) {
+    .card {
+        flex: 0 0 calc(50% - 1rem); /* Mengatur lebar kartu menjadi 50% dengan spasi di antaranya */
+    }
+}
+
+/* Media query untuk layar dengan lebar lebih dari 768px (tampilan tablet) */
+@media (min-width: 768px) {
+    .card {
+        flex: 0 0 calc(33.33% - 1rem); /* Mengatur lebar kartu menjadi 33.33% dengan spasi di antaranya */
+    }
+}
+
+/* Media query untuk layar dengan lebar lebih dari 992px (tampilan desktop) */
+@media (min-width: 992px) {
+    .card {
+        flex: 0 0 calc(25% - 1rem); /* Mengatur lebar kartu menjadi 25% dengan spasi di antaranya */
+    }
+}
